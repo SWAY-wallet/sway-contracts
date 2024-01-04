@@ -1,0 +1,52 @@
+{
+  "name": "@sway-wallet/sway-contracts",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "lerna-publish": "npm run build && lerna publish && lerna run tsc-clean",
+    "build": "hardhat compile && lerna run tsc",
+    "prepare": "husky install",
+    "prettier": "prettier --write --plugin=prettier-plugin-solidity --plugin=@trivago/prettier-plugin-sort-imports .",
+    "deploy:lock": "hardhat run --network gobiTestnet scripts/deploy.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.2",
+    "@nomicfoundation/hardhat-ethers": "^3.0.4",
+    "@nomicfoundation/hardhat-foundry": "^1.1.1",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@solidstate/abi": "^0.0.58",
+    "@solidstate/contracts": "^0.0.58",
+    "@solidstate/library": "^0.0.58",
+    "@solidstate/spec": "^0.0.58",
+    "@sway-wallet/contracts": "link:contracts",
+    "@sway-wallet/spec": "link:spec",
+    "@sway-wallet/typechain-types": "link:typechain-types",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.10.6",
+    "chai": "^4.3.10",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.8.0",
+    "hardhat": "^2.19.4",
+    "hardhat-gas-reporter": "^1.0.8",
+    "hardhat-linearization": "^0.1.1",
+    "hardhat-spdx-license-identifier": "^2.2.0",
+    "husky": "^8.0.3",
+    "lerna": "^8.0.1",
+    "prettier": "^3.1.1",
+    "prettier-plugin-solidity": "^1.3.1",
+    "solidity-coverage": "^0.8.5",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.1",
+    "typescript": "^5.3.3",
+    "yarn-up": "^1.4.1"
+  },
+  "resolutions": {
+    "@ethereum-waffle/mock-contract/ethers": "^5.7.2"
+  }
+}
